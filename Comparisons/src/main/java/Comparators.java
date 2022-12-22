@@ -1,3 +1,4 @@
+import org.hamcrest.core.IsEqual;
 
 /**
  * If we want to make programs that "do something", we're going to need to create instructions that change
@@ -13,9 +14,15 @@ public class Comparators {
      * @param b the second number to be compared.
      * @return true if a is equal to b, false otherwise.
      */
+
+
     public boolean isEqual(int a, int b){
+        if(a == b) {
+            return true;
+        }
         return false;
     }
+
 
     /**
      * @param a the first number to be compared.
@@ -23,6 +30,9 @@ public class Comparators {
      * @return true if a is greater than b, false otherwise.
      */
     public boolean greaterThan(int a, int b){
+        if(a > b) {
+            return true;
+        }
         return false;
     }
     /**
@@ -31,6 +41,9 @@ public class Comparators {
      * @return true if a is less than b, false otherwise.
      */
     public boolean lessThan(int a, int b){
+        if(a < b) {
+            return true;
+        }
         return false;
     }
     /**
@@ -39,6 +52,9 @@ public class Comparators {
      * @return true if a is greater than or equal to b, false otherwise.
      */
     public boolean greaterThanOrEqualTo(int a, int b){
+        if(a >= b) {
+            return true;
+        }
         return false;
     }
     /**
@@ -47,6 +63,9 @@ public class Comparators {
      * @return true if a is less than or equal to b, false otherwise.
      */
     public boolean lessThanOrEqualTo(int a, int b){
+        if(a <= b) {
+            return true;
+        }
         return false;
     }
 
@@ -56,6 +75,22 @@ public class Comparators {
      * @return true if a is not equal to b, false otherwise.
      */
     public boolean notEqualTo(int a, int b){
+        if(a != b) {
+            return true;
+        }
         return false;
     }
+
+    public static void main(String[] args) {
+        
+        Comparators user = new Comparators();
+
+        user.isEqual(1, 1);
+        user.greaterThan(10, 0);
+        user.lessThan(5, 7);
+        user.greaterThanOrEqualTo(10, 10);
+        user.lessThanOrEqualTo(5, 8);
+        user.notEqualTo(2, 3);
+    }
+
 }
