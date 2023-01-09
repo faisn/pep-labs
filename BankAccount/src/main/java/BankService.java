@@ -23,7 +23,7 @@ public class BankService {
      * @param amount the amount to be deposited.
      */
     public void deposit(double amount){
-        this.balance = amount;
+        this.balance = balance + amount;
 
     }
 
@@ -33,9 +33,12 @@ public class BankService {
      * @param amount the amount to be withdrawn.
      * @throws Exception
      */
-    public void withdraw(double amount) throws Exception{
-        if(amount < balance) {
-            throw new ArithmeticException("This transaction can not happen.");
+    public void withdraw(double amount) throws ArithmeticException{
+        this.balance -= amount;
+        if ( balance >= 0) {
+            System.out.println(getBalance());
+        }else if (balance <= 0) {
+            throw new ArithmeticException("You can't make this transaction");
         }
 
     }
