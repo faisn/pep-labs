@@ -23,6 +23,7 @@ public class BankService {
      * @param amount the amount to be deposited.
      */
     public void deposit(double amount){
+        this.balance = amount;
 
     }
 
@@ -30,8 +31,12 @@ public class BankService {
      * TODO: implement functionality to decrease the user's balance by an amount.
      * If a withdrawl would result in the user having a negative balance, the withdrawl should not occur.
      * @param amount the amount to be withdrawn.
+     * @throws Exception
      */
-    public void withdraw(double amount){
+    public void withdraw(double amount) throws Exception{
+        if(amount < balance) {
+            throw new ArithmeticException("This transaction can not happen.");
+        }
 
     }
 
@@ -40,6 +45,6 @@ public class BankService {
      * @return the user's balance.
      */
     public double getBalance(){
-        return 0;
+        return balance;
     }
 }
