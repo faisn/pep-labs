@@ -38,7 +38,7 @@ public class BankService {
         if ( balance >= 0) {
             System.out.println(getBalance());
         }else if (balance <= 0) {
-            throw new ArithmeticException("You can't make this transaction");
+            throw new ArithmeticException("You can't make this tran");
         }
 
     }
