@@ -1,0 +1,1 @@
+select count(song), count(artist) from song as song_table group by artist;
