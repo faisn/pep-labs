@@ -53,7 +53,6 @@ The syntax for creating an endpoint is as follows:
 ```java
 public static void main(String[] args){
     Javalin app = Javalin.create();
-    app.start(9000);
 
     // HTTP GET REQUEST to http://localhost:9000/get-request
     app.get("/get-request", ctx -> {
