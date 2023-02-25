@@ -11,16 +11,17 @@ public class LargestSum {
      */
     public int bigSum(List<Integer> nums){
         // loop through the list 
-        int current_largest_num = 0;
-        int largest = 0;
-        for (int i = 0; i < nums.size() ; i++) {
-            current_largest_num = nums.get(i) + nums.get(i);
-            
-            if(current_largest_num > largest) {
-                largest = current_largest_num;
+        int largestSum = 0;
+        for (int i = 0; i < nums.size(); i++) {
+            int sum = 0;
+            for (int j = i; j < nums.size(); j++) {
+                if (i == j) {
+                    sum += nums.get(i);
+                }
+                else if (sum > largestSum)
+                    largestSum = sum;
             }
         }
-       
-        return largest ;
+        return largestSum;
     }
 }
