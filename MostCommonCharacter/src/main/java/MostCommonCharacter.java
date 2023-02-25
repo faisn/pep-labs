@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.HashMap;
 
 public class MostCommonCharacter {
@@ -9,7 +10,34 @@ public class MostCommonCharacter {
      * @return the most common character within str.
      */
     public char recurringChar(String str) {
-        
-        return ' ';
+        int characterCount = 0;
+        int maxCharacter = 0;
+        char maxCharacterChar = '.';
+
+        char[] cArray = str.toCharArray();
+
+        for(int i =0; i < cArray.length ; i++)
+        {
+            int characterASCII = (int)cArray[i];
+            characterCount = 0;
+
+            //System.out.print("Chracter ASCII: " + characterASCII + "\n");
+            for(int x = 0; x < cArray.length -1; x++)
+            {
+                if(characterASCII == (int)cArray[x])
+                {
+                    characterCount ++;
+                    //System.out.print("Character Count for " + characterASCII + " " +  characterCount  + "\n");
+                    if(characterCount > maxCharacter)
+                    {
+                        maxCharacter = characterCount;
+                        maxCharacterChar = cArray[i];
+                    }
+                }
+            }
+        }
+
+        return maxCharacterChar;
     }
 }
+
