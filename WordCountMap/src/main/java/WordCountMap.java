@@ -20,10 +20,9 @@ public class WordCountMap {
         Map<String, Integer> wordCountMap = new HashMap<>();
         int count = 0;
         String str = " ";
-
         for (int i = 0; i < arrWord.length; i++) {
-            if(arrWord[i] == arrWord[i]) {
-                count = count + i + i;
+            if(arrWord[i].equals(arrWord[i])) {
+                count = count + i;
                 str = arrWord[i];
                 wordCountMap.put(str, count);
             }else {
