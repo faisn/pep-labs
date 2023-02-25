@@ -2,7 +2,7 @@
 :lab_name: pep-labs
 :repo_path: "/workspace/revpro-cli/pep-labs"
 :previous_lab: 
-:current_lab: 
+:current_lab: MostCommonCharacter
 :origin_remote: https://github.com/faisn/pep-labs
 :repo_clone_folder: "/workspace/revpro-cli/pep-labs"
 :github_username: faisn
@@ -42,10 +42,10 @@
   :count_labs_total: 96
   :count_labs_passed: 0
   :count_tests_total: 361
-  :count_tests_passed: 0
+  :count_tests_passed: 1
 :progress_test:
   :count_tests_total: 361
-  :count_tests_passed: 0
+  :count_tests_passed: 1
   Start:
     :Week: 1
     :Order: 1
@@ -1024,7 +1024,7 @@
     :Order: 3
     :Type: challenge
     :count_tests: 6
-    :count_tests_passed: 0
+    :count_tests_passed: 1
     :tests:
       mostCommonCharacterTest1: 0
       mostCommonCharacterTest2: 0
@@ -1032,6 +1032,10 @@
       mostCommonCharacterTest4: 0
       mostCommonCharacterTest5: 0
       mostCommonCharacterTest6: 0
+      sumTest1: 0
+      sumTest2: 1
+      sumTest3: 0
+      sumTest4: 0
   Fibonacci:
     :Week: 9
     :Order: 4
